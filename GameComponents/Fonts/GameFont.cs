@@ -1,0 +1,8 @@
+namespace GameComponents.Fonts;
+public static class Cascavelis {
+    static readonly string[][] AlphabetUpperCase = [
+        [
+            ""
+        ],    
+    ];
+}
