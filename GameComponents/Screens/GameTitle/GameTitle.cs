@@ -3,6 +3,7 @@ using GameComponents.Color;
 namespace GameComponents.Screens;
 
 public static class Title {
+    public static int titleAnimationCounter = 1;
     public static void ShowTitle() {
         string[] GameTitle = 
         [  
@@ -18,10 +19,10 @@ public static class Title {
             "        ██     ██ ██     ██ ██  ▀▀  ██ ██              ",
             "        ▀█▄▄▄▄▄█▀ ▀█▄   ▄█▀ ▀█▄    ▄█▀ ██▄▄▄▄▄▀        "
         ];
-
+        
         for (int i = 0; i < GameTitle.Length; i++) {
             Console.WriteLine(GameTitle[i]);
-            Thread.Sleep(100);
+            Thread.Sleep((titleAnimationCounter == 1) ? 100 : 0);
         }       
     }
 }
